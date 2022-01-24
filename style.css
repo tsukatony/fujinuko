@@ -1,0 +1,300 @@
+@charset "UFT-8";
+body {
+    line-height: 1.7;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #000;
+}
+a,
+a:link {
+    color: #3585b7;
+}
+a:visited {
+    color: #6252b7;
+}
+a:hover {
+    text-decoration: none;
+    color: #555;
+}
+
+h2 {
+    margin-top: 30px;
+    padding: 1rem 2rem;
+    border-left: 4px solid #000;
+}
+
+/* 吹き出し本体 */
+.inner img {
+    width: 84px;
+}
+.balloon1{
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #776aeb;
+    margin-left: 150px;          /* 左に余白を設ける */
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  /* 画像 - 絶対配置で左上に配置 */
+  .balloon1 .icon{
+    position: absolute;
+    left: -110px;
+    top: 0;
+  }
+  /* 三角アイコン */
+.balloon1::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: 20px;
+    border-right: 15px solid #776aeb;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+
+/* 吹き出し本体 */
+.balloon2{
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #da5533;
+    margin-right: 150px;          /* 右に余白を設ける */
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  /* 画像 - 絶対配置で右上に配置 */
+  .balloon2 .icon{
+    position: absolute;
+    right: -110px;
+    top: 0;
+  }
+  /* 三角アイコン */
+.balloon2::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    right: -15px;
+    top: 20px;
+    border-left: 15px solid #da5533;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+
+/* header */
+header {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: #776aeb;
+    color: #fff;
+}
+header h1 {
+    font-size: 50px;
+    margin: 0 150px;
+    border-bottom: 3px dashed #fff;
+}
+.nav {
+    display: flex;
+    margin-top: 20px;
+}
+.inline {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+.inline li {
+    list-style-type: none;
+}
+.inline li:first-child {
+    border-left: 1px solid #fff;
+}
+.inline li:not(first-child) {
+    border-right: 1px solid #fff;
+}
+.inline li a,
+.inline li a:link,
+.inline li a:visited {
+    display: block;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s 0s ease;
+}
+.inline li a:hover {
+    background-color: #fff;
+    color: #776aeb;
+}
+
+
+/* home */
+.home main .visual {
+    background: url(../images/20375ced40379f1e8ea26f8e6c287f042.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    padding: 150px 50px 0 650px;
+    box-sizing: border-box;
+}
+.home main .visual p {
+    animation-name: fadeInAnime;
+    animation-fill-mode:backwards;
+    animation-duration:3s;
+    animation-timing-function:ease;
+    animation-delay: 0.5s;
+    animation-direction:normal;
+    color: #000
+}
+@keyframes fadeInAnime{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+.home main .visual p.catch {
+    margin: 0;
+    font-size: 45px;
+}
+
+.home main .visual p.catch a,
+.home main .visual p.catch a:link,
+.home main .visual p.catch a:visited {
+    font-size: 60px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s 0s ease;
+}
+.home main .visual p.catch a:hover {
+    color: aqua;
+}
+.home main .visual p .fujinuko {
+    font-size: 25px;
+    color: #776aeb;
+}
+.home main .visual p .yakitori {
+    font-size: 25px;
+    color: #da5533;
+}
+.home main .inner {
+    margin: 50px;
+}
+.home main .inner dl {
+    width: 100%;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+.home main .inner dl dt {
+    float: left;
+    padding: 1em;
+    color: #000;
+}
+.home main .inner dl dd {
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    padding: 1em 0 1em 18em;
+}
+input[type="email"] {
+    width: 50%;
+}
+input {
+    font-size: 1em;
+    padding: 5px;
+}
+label {
+    margin-right: 1em;
+}
+textarea {
+    width: 30em;
+    font-size: 1em;
+    padding: 5px;
+}
+p.submit {
+    text-align: center;
+}
+input[type="submit"] {
+    padding: 20px 100px;
+    background-color: #776aeb;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.must {
+    color: #da5533;
+}
+.errorMsg {
+    font-size: 10px;
+    color: #da5533;
+    margin: 0;
+}
+.confirm p {
+    margin: 0;
+}
+
+/* footer */
+footer .sitemap {
+    padding: 50px;
+    padding-left: 100px;
+    background-color: #776aeb;
+    color: #fff;
+}
+footer a,
+footer a:link,
+footer a:visited {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s 0s ease;
+}
+footer a:hover {
+    color: aqua;
+}
+footer .sitemap p {
+    margin-left: 50px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s 0s ease;
+}
+footer .sitemap p:hover {
+    color: aqua;
+}
+footer .sidebar {
+    background-color: #6253f0;
+    justify-content: flex-end;
+    display: flex;
+    padding: 10px;
+}
+footer .sidebar p {
+    margin-right: 30px;
+    margin-left: 30px;
+    color: #888;
+}
+.hidden {
+    display: none;
+}
